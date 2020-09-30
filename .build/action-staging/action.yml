@@ -7,7 +7,7 @@ runs:
   args:
     - ${{ inputs.PUBLISHSECRET }}
   env: 
-    PUBLISHSECRET: ${{ inputs.PUBLISHSECRET }}
+    PUBLISHSECRET: ${{ secrets.PUBLISHSECRET }}
 
 branding:
   icon: "mic"
