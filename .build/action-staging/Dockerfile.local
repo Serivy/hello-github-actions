@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic
+
+
+COPY . /github/workspace
+WORKDIR /github/workspace
+
+RUN chmod +x ".build/secret-printer.sh"
+ENTRYPOINT [".build/secret-printer.sh"]
+# ENTRYPOINT [".build/secret-printer.sh"]

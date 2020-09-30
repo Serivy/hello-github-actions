@@ -1,6 +1,5 @@
 #!/bin/sh -l
 
-sh -c "echo Building zzzzzzzzzzz"
-ls > ~/output.txt
-
-cat ~/output.txt
+ls -la
+pwd
+sh -c "echo Hello world my name is $INPUT_MY_NAME"
