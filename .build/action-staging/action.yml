@@ -5,7 +5,9 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
-    - ${{ secrets.PUBLISHSECRET }}
+    - ${{ inputs.PUBLISHSECRET }}
+  env: 
+    PUBLISHSECRET: ${{ inputs.PUBLISHSECRET }}
 
 branding:
   icon: "mic"

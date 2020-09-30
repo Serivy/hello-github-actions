@@ -6,11 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      # - name: PublishAction
-      #   id: publishaction
-        # uses: ./.build/action-staging
-      - shell: bash
-        env:
+      - name: PublishAction
+        id: publishaction
+        uses: ./.build/action-staging
+        with: # Set the secret as an input
           PUBLISHSECRET: ${{ secrets.PUBLISHSECRET }}
-        run: |
-          echo secret $PUBLISHSECRET
+
+        # - shell: bash
+        # env:
+        #   PUBLISHSECRET: ${{ secrets.PUBLISHSECRET }}
+        # run: |
+        #   echo secret $PUBLISHSECRET
