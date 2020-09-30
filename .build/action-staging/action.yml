@@ -1,0 +1,12 @@
+name: "Publish VTT to staging area"
+author: "seravy@gmail.com"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ secrets.PUBLISHSECRET }}
+
+branding:
+  icon: "mic"
+  color: "purple"

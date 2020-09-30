@@ -9,11 +9,3 @@ jobs:
       - name: PublishAction
         id: publishaction
         uses: ./.build/action-staging
-        secret:
-          PUBLISHSECRET: ${{ secrets.PUBLISHSECRET }}
-
-        # - shell: bash
-        # env:
-        #   PUBLISHSECRET: ${{ secrets.PUBLISHSECRET }}
-        # run: |
-        #   echo secret $PUBLISHSECRET
