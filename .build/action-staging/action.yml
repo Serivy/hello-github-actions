@@ -1,11 +1,16 @@
 name: "Publish VTT to staging area"
 author: "seravy@gmail.com"
 
+inputs:
+  PUBLISHSECRET:
+    description: "The secret for publishing."
+    required: true
+
 runs:
   using: "docker"
   image: "Dockerfile"
-  args:
-    - ${{ inputs.PUBLISHSECRET }}
+  # args:
+  #   - ${{ inputs.PUBLISHSECRET }}
   env: 
     PUBLISHSECRET: ${{ inputs.PUBLISHSECRET }}
 
